@@ -10,7 +10,7 @@ function getUser(e){
   .then(user => {
     var card = `
     <div class="card" style="width: 21rem;">
-      <img src="${user.avatar_url}" class="img card-img-top">
+      <img src="${user.avatar_url}" class="img card-img-top" style="max-height: 21rem;">
       <div class="card-body">
         <h5 class="card-heading">${user.name}</h5>
         <p class="card-text">This user was gotten from github API using JavaScript FetchAPI</p>
