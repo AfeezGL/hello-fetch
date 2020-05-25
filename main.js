@@ -12,7 +12,7 @@ function getUser(e){
     <div class="card">
       <img src="${user.avatar_url}" class="img card-img-top">
       <div class="card-body">
-        <h6 class="card-heading">${user.name}</h6>
+        <h5 class="card-heading">${user.name}</h5>
         <p class="card-text">This user was gotten from github API using JavaScript FetchAPI</p>
         <a href="${user.html_url}" class="btn btn-primary" target="_blank">View Profile</a>
       </div>
