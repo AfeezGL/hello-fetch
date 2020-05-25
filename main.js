@@ -8,8 +8,9 @@ function getUser(e){
     fetch('https://api.github.com/users/'+searchQuery.value)
     .then(res => res.json())
     .then((user) => {
-    	if (user.name) {
-    		var card = `
+    	if (user.id) {
+    		if (user.name) {
+    			var card = `
     			<div class="card" style="width: 21rem;">
     				<img src="${user.avatar_url}" class="card-img-top img-fluid img" style="max-height: 21rem;">
     				<div class="card-body">
@@ -18,7 +19,19 @@ function getUser(e){
     					<a href="${user.html_url}" class="btn btn-primary">View Profile</a>
     				</div>
     			</div>
-    	`
+    			`
+    		}  else {
+    			var card = `
+    			<div class="card" style="width: 21rem;">
+    				<img src="${user.avatar_url}" class="card-img-top img-fluid img" style="max-height: 21rem;">
+    				<div class="card-body">
+    					<h5 class="card-title">${user.login}</h5>
+    					<p class="card-text">This user was gotten through github API using javascript fetchAPI</p>
+    					<a href="${user.html_url}" class="btn btn-primary">View Profile</a>
+    				</div>
+    			</div>
+    			`
+    		}
     	output.innerHTML = card;
     	} else{
     		var card = `
