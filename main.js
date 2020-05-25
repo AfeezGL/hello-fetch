@@ -9,7 +9,7 @@ function getUser(e){
   .then(res => res.json())
   .then(user => {
     var card = `
-    <div class="card">
+    <div class="card" style="width: 21rem;">
       <img src="${user.avatar_url}" class="img card-img-top">
       <div class="card-body">
         <h5 class="card-heading">${user.name}</h5>
