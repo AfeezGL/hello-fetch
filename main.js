@@ -10,7 +10,7 @@ function getUser(e){
     .then((user) => {
     	if (user.id) {
     		if (user.name) {
-    			let card = `
+    			var card = `
     			<div class="card" style="width: 21rem;">
     				<img src="${user.avatar_url}" class="card-img-top img-fluid img" style="max-height: 21rem;">
     				<div class="card-body">
@@ -21,7 +21,7 @@ function getUser(e){
     			</div>
     			`
     		}  else {
-    			let card = `
+    			var card = `
     			<div class="card" style="width: 21rem;">
     				<img src="${user.avatar_url}" class="card-img-top img-fluid img" style="max-height: 21rem;">
     				<div class="card-body">
@@ -34,7 +34,7 @@ function getUser(e){
     		}
     	output.innerHTML = card;
     	} else{
-    		let card = `
+    		var card = `
     		<div class="card" style="width: 21rem;">
     			<div class="card-body">
     				<p class="card-text">User ${searchQuery.value} does not exist.</p>
